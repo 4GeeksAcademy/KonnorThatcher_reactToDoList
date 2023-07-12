@@ -6,7 +6,7 @@ import ToDoList from "./todolist";
 const Home = () => {
 	return (
 		<div className="container-fluid text-center">
-			<h1>You've Got Stuff To Do, Bucko!</h1>
+			<h1 className="mt-2" style={{fontFamily: 'Mynerve', fontSize: '3rem'}}>You've Got Stuff To Do, Bucko!</h1>
 			<ToDoList />
 		</div>
 	);

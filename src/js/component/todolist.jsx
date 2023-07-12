@@ -2,7 +2,11 @@ import React, {useState, useEffect} from 'react'
 
 const ToDoList = () => {
   const [inputValue, setInputValue] = useState('');
-  const [listItems, setListItems] = useState([{task: "This task is a priority", priority: true}, {task: "This task is not a priority", priority: false}]);
+  const [listItems, setListItems] = useState([
+    {task: "This task is a priority", priority: true}, 
+    {task: "This task is not a priority", priority: false}, 
+    {task: "A thing that is on the list", priority: false}
+  ]);
   const [completed, setCompleted] = useState(['This task is complete']);
 
   useEffect(() => {
@@ -65,7 +69,7 @@ const ToDoList = () => {
                 <button className="btn btn-secondary me-1" disabled>
                   <i className="fa-solid fa-circle-exclamation" style={{color: "#bbb"}}></i>
                 </button>
-                <button className="btn btn-danger" onClick={() => setCompleted(completed.toSpliced(idx, 1))}>
+                <button className="btn btn-danger" onClick={() => setCompleted(completed.toSpliced(idx, 1))} title='Delete'>
                   <i className="fa-solid fa-trash-can"></i>
                 </button>
               </div>
